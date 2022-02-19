@@ -71,9 +71,7 @@
     </nav>
 
     <?php
-    include 'config.php';
-    $sql = "SELECT * FROM TRANSACTION_TYPE_1";
-    $query = mysqli_query($conn, $sql);
+    
     ?>
 
     <div class="container-main">
@@ -89,7 +87,12 @@
             </thead>
             <tbody>
 
-                <?php while ($rows = mysqli_fetch_assoc($query)) {
+                <?php
+                include 'config.php';
+                $sql = "SELECT * FROM TRANSACTION_TYPE_1";
+                $query = mysqli_query($conn, $sql);
+                
+                 while ($rows = mysqli_fetch_assoc($query)) {
 
                 ?>
                     <tr>
