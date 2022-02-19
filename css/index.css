@@ -79,3 +79,20 @@ body {
     background: #1f1f1f;
     color: white;
 }
+
+.images {
+    margin-top: 500px;
+}
+
+.im1 {
+    width: 50px;
+}
+
+.container-fluid a {
+    font-weight: 800;
+}
+
+.container-fluid {
+    background-color: yellow;
+    /* color: red; */
+}
