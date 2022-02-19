@@ -20,18 +20,19 @@
             background-color: yellow;
             /* color: red; */
         }
-    .container-main{
-    margin-top: 100px;
-    }
-    #btn{
-    padding: 5px;
-    background-color: #fff;
-    color:#2d2d2d;
-    font-size: 0.8rem;
-    font-weight: 800;
-    border-radius: 10px;
-    }
 
+        .container-main {
+            margin-top: 100px;
+        }
+
+        #btn {
+            padding: 5px;
+            background-color: #fff;
+            color: #2d2d2d;
+            font-size: 0.8rem;
+            font-weight: 800;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -96,7 +97,7 @@
                         <td><?php echo $rows['name'] ?></td>
                         <td><?php echo $rows['email'] ?></td>
                         <td><?php echo $rows['balance'] ?></td>
-                        <td><button id="btn">Transfer Money</button></td>
+                        <td> <a href="userDetails.php?id=<?php echo $rows['id'];?>"><button id="btn">Transfer Money</button></a> </td>
                     </tr>
                 <?php } ?>
 
