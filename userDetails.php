@@ -37,12 +37,12 @@ if (isset($_POST['submit'])) {
 
 
         $sql = "update user_info_1 set balance=$new_balance where id=$from";
-        $query = mysqli_query($conn, $sql);
+         mysqli_query($conn, $sql);
 
         $new_balance = $sql2['balance'] + $amount;
 
         $sql = "update user_info_1 set balance=balance+$amount where id=$to";
-        $query = mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql);
 
         $sender = $sql1['name'];
         $receiver = $sql2['name'];
