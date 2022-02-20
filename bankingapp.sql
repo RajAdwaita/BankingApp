@@ -10,7 +10,7 @@ create table TRANSACTION_TYPE_1 (
     id int(11) not null,
     sender varchar(25) not null,
     receiver varchar(25) not null,
-    bal float not null,
+    bal int(8) not null,
     date_time datetime not null default current_timestamp,
     primary key (id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;

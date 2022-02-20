@@ -13,7 +13,7 @@
     <title>Banking App</title>
     <style>
         .container-main {
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
         #btn {
@@ -32,6 +32,11 @@
         .container-fluid {
             background-color: yellow;
             /* color: red; */
+        }
+        .head{
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
         }
     </style>
 </head>
@@ -62,7 +67,7 @@
                         <a class="nav-link" aria-current="page" href="transactions.php">Records</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">FeedBack</a>
+                        <a class="nav-link" aria-current="page" href="feedback.php">FeedBack</a>
                     </li>
 
                 </ul>
@@ -75,10 +80,13 @@
     ?>
 
     <div class="container-main">
+        <div class="head">
+            <h1>Transaction Records</h1>
+        </div>
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
-                    <th scope="col">Account No.</th>
+                    <th scope="col">Transaction Id</th>
                     <th scope="col">Sender</th>
                     <th scope="col">Receiver</th>
                     <th scope="col">Amount (in 💲)</th>
@@ -89,7 +97,7 @@
 
                 <?php
                 include 'config.php';
-                $sql = "SELECT * FROM TRANSACTION_TYPE_1";
+                $sql = "SELECT * FROM transaction_type_1";
                 $query = mysqli_query($conn, $sql);
                 
                  while ($rows = mysqli_fetch_assoc($query)) {
@@ -107,6 +115,7 @@
             </tbody>
         </table>
     </div>
+    <div></div>
 
     <footer>
         <div class="container-bottom">

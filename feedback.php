@@ -32,10 +32,12 @@
             color: #fff;
             font-size: 1rem;
         }
-        .container-fluid a{
+
+        .container-fluid a {
             font-weight: 800;
         }
-        .container-fluid{
+
+        .container-fluid {
             background-color: yellow;
             /* color: red; */
         }
@@ -46,18 +48,12 @@
             align-items: center;
         } */
 
-        .container-bottom{
+        .container-bottom {
             margin-bottom: 0;
             height: 150px;
             background-color: orange;
             color: #fff;
             /* padding: 25px; */
-        }
-
-        .im1{
-            width: 600px;
-            border: red solid 1px;
-            height: 475px;
         }
     </style>
 </head>
@@ -88,7 +84,7 @@
                         <a class="nav-link" aria-current="page" href="transactions.php">Records</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="feedback.php">FeedBack</a>
+                        <a class="nav-link" aria-current="page" href="#">FeedBack</a>
                     </li>
 
                 </ul>
@@ -100,7 +96,7 @@
         <div class="top-section">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="h1">Welcome to bablu_bank</h1>
+                    <h1 class="h1">FEEDBACK FORM</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
                 </div>
                 <div class="col-md-6">
@@ -111,14 +107,52 @@
 
         </div>
         <div class="rest-section">
-            <div style="width: 50%; float:left" class="images">
-                <img height="400px" width="600px" class="im1" src="https://media.istockphoto.com/photos/businessman-touching-icon-online-banking-and-icon-network-connection-picture-id1150208425?b=1&k=20&m=1150208425&s=170667a&w=0&h=Iu0cSy8enp2MXRhywUq7KtGDDlKippQBS80Wor3tu68=" alt="">
-            </div>
-
-            <div style="width: 50%; float:right" class="text-area">
-                <h1>ABOUT US</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus ducimus, voluptatum ex praesentium repudiandae saepe dolore inventore excepturi nam voluptatem sequi necessitatibus quia rerum quisquam soluta iure enim autem! Alias quasi corrupti illo quod aut ad modi cumque enim vero quae, id eligendi ipsam amet animi molestiae sunt odio.\</p>
-            </div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
 
     </div>

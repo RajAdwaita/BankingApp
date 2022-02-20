@@ -18,6 +18,10 @@ if (isset($_POST['submit'])) {
     $query = mysqli_query($conn, $sql);
     $sql2 = mysqli_fetch_array($query);
 
+    $sqll="select * from transaction_type_1 where id=$from";
+    $query = mysqli_query($conn, $sqll);
+    $sql3 = mysqli_fetch_array($query);
+
 
     if ($amount < 0) {
         echo '<script type="text/javascript">';
@@ -33,7 +37,8 @@ if (isset($_POST['submit'])) {
         echo "</script>";
     } else {
         $new_balance = $sql1['balance'] - $amount;
-
+        $sqll='update transaction_type_1 set bal=$amount where id=$from';
+        mysqli_query($conn, $sqll);
 
 
         $sql = "update user_info_1 set balance=$new_balance where id=$from";
@@ -46,7 +51,7 @@ if (isset($_POST['submit'])) {
 
         $sender = $sql1['name'];
         $receiver = $sql2['name'];
-        $sql = "insert into TRANSACTION_TYPE_1('sender','receiver','bal') values('$sender','$receiver','$amount')";
+        $sql = "insert into TRANSACTION_TYPE_1(sender,receiver,bal) values('$sender','$receiver','$amount')";
 
 
         $query = mysqli_query($conn, $sql);

@@ -22,7 +22,7 @@
         }
 
         .container-main {
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
         #btn {
@@ -32,6 +32,11 @@
             font-size: 0.8rem;
             font-weight: 800;
             border-radius: 10px;
+        }
+        .head{
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
         }
     </style>
 </head>
@@ -62,7 +67,7 @@
                         <a class="nav-link" aria-current="page" href="transactions.php">Records</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">FeedBack</a>
+                        <a class="nav-link" aria-current="page" href="feedback.php">FeedBack</a>
                     </li>
 
                 </ul>
@@ -77,6 +82,9 @@
     ?>
 
     <div class="container-main">
+        <div class="head">
+            <h1>Customer List</h1>
+        </div>
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
